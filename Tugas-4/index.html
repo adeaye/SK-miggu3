@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Room List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#F5F5F5]">
+    <!-- Sidebar -->
+
+    <aside
+      class="fixed left-0 top-0 w-[80px] h-[1024px] bg-white flex flex-col items-center py-4 border-r border-[#EBEBEB] z-50"
+    >
+      <div
+        class="bg-gradient-to-r from-orange-500 to-yellow-400 w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold mb-6"
+      >
+        E
+      </div>
+      <div class="flex flex-col items-center gap-6 text-gray-500">
+         <!-- Active -->
+        <div class="text-orange-500">
+          <button>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class="lucide lucide-circle-arrow-right-icon lucide-circle-arrow-right"
+            stroke-linejoin="round"
+            >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12h8" />
+            <path d="m12 16 4-4-4-4" />
+          </svg>
+          </button>
+        </div>
+        <!-- Inactive Icons -->
+        <div class="text-gray-400">
+          <button>
+
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-layout-grid-icon lucide-layout-grid"
+            >
+            <rect width="7" height="7" x="3" y="3" rx="1" />
+            <rect width="7" height="7" x="14" y="3" rx="1" />
+            <rect width="7" height="7" x="14" y="14" rx="1" />
+            <rect width="7" height="7" x="3" y="14" rx="1" />
+          </svg>
+        </button>
+        </div>
+        <div class="text-gray-400">
+          <button>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-sticky-note-icon lucide-sticky-note"
+            >
+            <path
+            d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"
+            />
+            <path d="M15 3v4a2 2 0 0 0 2 2h4" />
+          </svg>
+        </button>
+        </div>
+        <!-- Active -->
+        <div class="text-orange-500">
+          <button>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-clipboard-pen-line-icon lucide-clipboard-pen-line"
+            >
+            <rect width="8" height="4" x="8" y="2" rx="1" />
+            <path
+            d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.5"
+            />
+            <path d="M16 4h2a2 2 0 0 1 1.73 1" />
+            <path d="M8 18h1" />
+            <path
+            d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
+            />
+          </svg>
+        </button>
+        </div>
+
+        <!-- Inactive Icons -->
+        <div class="text-gray-400">
+          <button>
+
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-settings-icon lucide-settings"
+            >
+            <path
+            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+            />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </div>
+      </button>
+      </div>
+    </aside>
+
+    <!-- Header -->
+    <header
+      class="h-[80px] w-[1360px] ml-20 pl-20 pr-6 flex justify-between items-center border-b border-gray-200 bg-white"
+    >
+      <h1 class="text-2xl font-semibold text-gray-800">Rooms</h1>
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <p class="text-gray-700 font-semibold">Angelina</p>
+          <p class="text-sm text-gray-400">Admin</p>
+        </div>
+        <img
+          src="https://i.pravatar.cc/40"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full border-2 border-orange-500"
+        />
+        <button class="text-red-500 text-xl">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-log-out-icon lucide-log-out"
+          >
+            <path d="m16 17 5-5-5-5" />
+            <path d="M21 12H9" />
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="absolute top-[100px] left-[100px] w-[1320px] bg-[#F5F5F5]">
+      <!-- Filter Bar -->
+      <div
+        class="w-full h-[80px] bg-white border-b border-[#EBEBEB] flex items-center px-6 space-x-4"
+      >
+        <!-- Filters -->
+        <section
+          class="w-[1320px] h-[80px] bg-white border-b border-[#EBEBEB] rounded-md flex items-center px-6 space-x-4"
+        >
+          <input
+            type="text"
+            placeholder="Enter the keyword here..."
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-md text-sm"
+          />
+          <div
+            class="flex items-center gap-2 border border-gray-300 rounded-md px-2 py-1"
+          >
+            <label class="text-sm text-gray-400">Room Type:</label>
+            <select
+              class="w-40 px-2 py-1 text-sm text-gray-700 bg-white focus:outline-none"
+            >
+              <option disabled selected></option>
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+            </select>
+          </div>
+          <div
+            class="flex items-center gap-2 border border-gray-300 rounded-md px-2 py-1"
+          >
+            <label class="text-sm text-gray-400">Capacity:</label>
+            <select
+              class="w-40 px-2 py-1 text-sm text-gray-700 bg-white focus:outline-none"
+            >
+              <option disabled selected></option>
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+            </select>
+          </div>
+          <button
+            class="px-5 py-2 border border-orange-500 text-orange-600 rounded-md hover:bg-orange-50 text-sm font-medium bg-white"
+          >
+            Search
+          </button>
+          <button class="bg-[#FF6600] text-white px-5 py-2 rounded-md text-sm">
+            + Add New Room
+          </button>
+        </section>
+      </div>
+
+      <!-- Grid Room Card -->
+
+      <div
+        class="w-full h-[812px] bg-white border-r border-[#EBEBEB] grid grid-cols-4 gap-4 p-6 overflow-y-auto"
+      >
+        <!-- Room Card Example (repeat as needed) -->
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Ulangi card di atas sesuai kebutuhan -->
+
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg overflow-hidden shadow-sm">
+          <div class="relative">
+            <img
+              src="meeting room1.webp"
+              alt="Room"
+              class="w-full h-[150px] object-cover"
+            />
+            <div class="absolute top-2 right-2 flex space-x-1">
+              <button class="bg-white p-1 rounded shadow">&#128465;</button>
+              <button class="bg-white p-1 rounded shadow">&#9998;</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="font-semibold text-lg">Aster Room</h2>
+              <span
+                class="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                >Small</span
+              >
+            </div>
+            <div class="flex justify-between text-sm mt-1">
+              <div class="flex items-center gap-1">
+                <span>&#128101;</span> 10 people
+              </div>
+              <div class="flex items-center gap-1">
+                💰<span>Rp</span> 500.000/hour
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </body>
+</html>
