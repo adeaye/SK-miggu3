@@ -1,21 +1,25 @@
-// Lengkapi kode supaya kode dapat berjalan, ganti ... dengan kode yang diperlukan.
-
+// ini adalah untuk perbaikan soal yang diberikan
 const nilaiUjian = [80, 50, 70, 80, 40];
 let totalNilai = 0;
 
-// lengkapi kondisi berhenti perulangan
-for (let i = 0; i < ... ; i++) {
-    // lengkapi rumus penambahan dengan nilai yang sedang diiterasi
-    totalNilai = totalNilai + ... ;
+// Perulangan sebanyak panjang array
+for (let i = 0; i < nilaiUjian.length; i++) {
+  // Tambahkan nilai pada indeks ke-i ke totalNilai
+  totalNilai = totalNilai + nilaiUjian[i];
 }
 
-// lengkapi rumus
-const nilaiRatarata = totalNilai / ... ;
+// Hitung rata-rata dengan membagi total nilai dengan jumlah elemen array
+const nilaiRatarata = totalNilai / nilaiUjian.length;
 
-// isi kondisi ketika nilai rata-rata 
-// lebih besar dari atau sama dengan 60 maka lulus
-if( ... ) {
-    console.log('Selamat Anda Lulus');
+// Cek apakah rata-rata >= 60
+if (nilaiRatarata >= 60) {
+  console.log("Selamat Anda Lulus");
 } else {
-    console.log('Maaf Anda Tidak Lulus');
+  console.log("Maaf Anda Tidak Lulus");
 }
+
+// nilaiUjian.length digunakan agar loop menyesuaikan jumlah elemen dalam array.
+
+// nilaiUjian[i] mengambil nilai di indeks ke-i.
+
+// nilaiRatarata >= 60 adalah kondisi kelulusan.
