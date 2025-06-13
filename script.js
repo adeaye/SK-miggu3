@@ -4,18 +4,22 @@ const nilaiUjian = [80, 50, 70, 80, 40];
 let totalNilai = 0;
 
 // lengkapi kondisi berhenti perulangan
-for (let i = 0; i < ... ; i++) {
-    // lengkapi rumus penambahan dengan nilai yang sedang diiterasi
-    totalNilai = totalNilai + ... ;
+for (let i = 0; i < nilaiUjian.length; i++) {
+  // lengkapi rumus penambahan dengan nilai yang sedang diiterasi
+  totalNilai = totalNilai + nilaiUjian[i];
 }
 
-// lengkapi rumus
-const nilaiRatarata = totalNilai / ... ;
+console.log("Total Nilai", totalNilai);
 
-// isi kondisi ketika nilai rata-rata 
+// lengkapi rumus
+const nilaiRatarata = totalNilai / nilaiUjian.length;
+
+console.log("Nilai Rata-rata", nilaiRatarata);
+
+// isi kondisi ketika nilai rata-rata
 // lebih besar dari atau sama dengan 60 maka lulus
-if( ... ) {
-    console.log('Selamat Anda Lulus');
+if (nilaiRatarata >= 60) {
+  console.log("Selamat Anda Lulus");
 } else {
-    console.log('Maaf Anda Tidak Lulus');
+  console.log("Maaf Anda Tidak Lulus");
 }

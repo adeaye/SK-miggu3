@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <div class="h-[13vh] flex flex-col">
+      <header
+        class="h-16 bg-white shadow z-10 flex-shrink-0 flex items-center px-4 fixed w-full top-0 left-0"
+      >
+        <div class="flex justify-between items-center w-full">
+          <div class="flex items-center space-x-4">
+            <img
+              src="./assets//Version=Icon Only-Round, Type=Main.webp"
+              alt="logo"
+            />
+            <h1 class="text-2xl font-bold">Rooms</h1>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-3">
+              <img
+                src="https://i.pravatar.cc/32"
+                class="rounded-full w-8 h-8"
+                alt="User"
+              />
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="font-small">Angelina</span>
+              <span class="text-sm text-gray-500">Admin</span>
+            </div>
+            <div>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.582 13.6969C12.3237 16.6969 10.782 17.9219 7.40703 17.9219H7.2987C3.5737 17.9219 2.08203 16.4302 2.08203 12.7052L2.08203 7.27187C2.08203 3.54687 3.5737 2.05521 7.2987 2.05521H7.40703C10.757 2.05521 12.2987 3.26354 12.5737 6.21354"
+                  stroke="#FF0000"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.50104 10L16.9844 10"
+                  stroke="#FF0000"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.1263 12.7891L17.918 9.9974L15.1263 7.20573"
+                  stroke="#FF0000"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-1">
+      <!-- Sidebar -->
+      <aside
+        class="w-20 bg-white shadow fixed h-full top-16 z-10 align-items-center"
+      >
+        <div class="mt-4 pl-7">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.0013 23.8307C18.9844 23.8307 23.8346 18.9805 23.8346 12.9974C23.8346 7.01431 18.9844 2.16406 13.0013 2.16406C7.01822 2.16406 2.16797 7.01431 2.16797 12.9974C2.16797 18.9805 7.01822 23.8307 13.0013 23.8307Z"
+              stroke="#EB5B00"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.20703 13H15.707"
+              stroke="#EB5B00"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13.543 16.25L16.793 13L13.543 9.75"
+              stroke="#EB5B00"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="pl-5">
+          <div class="w-8 h-8 bg-orange-500 rounded">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" fill="white" />
+              <path
+                d="M30 16.52V11.98C30 10.57 29.36 10 27.77 10H23.73C22.14 10 21.5 10.57 21.5 11.98V16.51C21.5 17.93 22.14 18.49 23.73 18.49H27.77C29.36 18.5 30 17.93 30 16.52Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M30 27.77V23.73C30 22.14 29.36 21.5 27.77 21.5H23.73C22.14 21.5 21.5 22.14 21.5 23.73V27.77C21.5 29.36 22.14 30 23.73 30H27.77C29.36 30 30 29.36 30 27.77Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 16.52V11.98C18.5 10.57 17.86 10 16.27 10H12.23C10.64 10 10 10.57 10 11.98V16.51C10 17.93 10.64 18.49 12.23 18.49H16.27C17.86 18.5 18.5 17.93 18.5 16.52Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 27.77V23.73C18.5 22.14 17.86 21.5 16.27 21.5H12.23C10.64 21.5 10 22.14 10 23.73V27.77C10 29.36 10.64 30 12.23 30H16.27C17.86 30 18.5 29.36 18.5 27.77Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="w-8 h-8 bg-gray-300 rounded">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" fill="white" />
+              <path
+                d="M16 20.2031H23"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 24.2031H20.38"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18 14H22C24 14 24 13 24 12C24 10 23 10 22 10H18C17 10 16 10 16 12C16 14 17 14 18 14Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M24 12.0234C27.33 12.2034 29 13.4334 29 18.0034V24.0034C29 28.0034 28 30.0034 23 30.0034H17C12 30.0034 11 28.0034 11 24.0034V18.0034C11 13.4434 12.67 12.2034 16 12.0234"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="w-8 h-8 bg-gray-300 rounded">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" fill="white" />
+              <path
+                d="M10 30H30"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M25 10H15C12 10 11 11.79 11 14V30H29V14C29 11.79 28 10 25 10Z"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 24.5H18"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22 24.5H25"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 20H18"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22 20H25"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 15.5H18"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22 15.5H25"
+                stroke="#EB5B00"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="w-8 h-8 bg-gray-300 rounded">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" fill="white" />
+              <path
+                d="M29 15V25C29 28 27.5 30 24 30H16C12.5 30 11 28 11 25V15C11 12 12.5 10 16 10H24C27.5 10 29 12 29 15Z"
+                stroke="#C4C4C4"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22.5 12.5V14.5C22.5 15.6 23.4 16.5 24.5 16.5H26.5"
+                stroke="#C4C4C4"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 21H20"
+                stroke="#C4C4C4"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M16 25H24"
+                stroke="#C4C4C4"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="w-8 h-8 bg-gray-300 rounded">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" fill="white" />
+              <path
+                d="M20 23C21.6569 23 23 21.6569 23 20C23 18.3431 21.6569 17 20 17C18.3431 17 17 18.3431 17 20C17 21.6569 18.3431 23 20 23Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 20.8814V19.1214C10 18.0814 10.85 17.2214 11.9 17.2214C13.71 17.2214 14.45 15.9414 13.54 14.3714C13.02 13.4714 13.33 12.3014 14.24 11.7814L15.97 10.7914C16.76 10.3214 17.78 10.6014 18.25 11.3914L18.36 11.5814C19.26 13.1514 20.74 13.1514 21.65 11.5814L21.76 11.3914C22.23 10.6014 23.25 10.3214 24.04 10.7914L25.77 11.7814C26.68 12.3014 26.99 13.4714 26.47 14.3714C25.56 15.9414 26.3 17.2214 28.11 17.2214C29.15 17.2214 30.01 18.0714 30.01 19.1214V20.8814C30.01 21.9214 29.16 22.7814 28.11 22.7814C26.3 22.7814 25.56 24.0614 26.47 25.6314C26.99 26.5414 26.68 27.7014 25.77 28.2214L24.04 29.2114C23.25 29.6814 22.23 29.4014 21.76 28.6114L21.65 28.4214C20.75 26.8514 19.27 26.8514 18.36 28.4214L18.25 28.6114C17.78 29.4014 16.76 29.6814 15.97 29.2114L14.24 28.2214C13.33 27.7014 13.02 26.5314 13.54 25.6314C14.45 24.0614 13.71 22.7814 11.9 22.7814C10.85 22.7814 10 21.9214 10 20.8814Z"
+                stroke="#C4C4C4"
+                stroke-width="0.923077"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <!-- Content -->
+        <main
+          class="ml-20 pt-4 px-6 pb-6 overflow-y-auto flex-1 h-[calc(100vh-4rem)]"
+        >
+          <!-- Search & Add Room -->
+          <div class="bg-white rounded shadow p-3">
+            <div class="flex flex-wrap justify-between gap-4 mb-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter the keyword here..."
+                  class="px-4 py-2 border border-gray-300 rounded w-72"
+                />
+                <select class="px-4 py-2 border border-gray-300 rounded w-45">
+                  <option>Room Type</option>
+                </select>
+                <select class="px-4 py-2 border border-gray-300 rounded w-45">
+                  <option>Capacity</option>
+                </select>
+              </div>
+              <div>
+                <button
+                  class="bg-white text-orange-500 border border-orange-500 px-4 py-2 rounded"
+                >
+                  Search
+                </button>
+                <button
+                  class="bg-orange-600 text-white px-4 py-2 rounded ml-auto"
+                >
+                  + Add New Room
+                </button>
+              </div>
+            </div>
+
+            <!-- Room Cards -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <!-- Dummy Room Card (repeatable) -->
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-2xl shadow overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="./assets/room.webp"
+                    alt="Room"
+                    class="w-full h-36 object-cover"
+                  />
+                  <span
+                    class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded"
+                    >Small</span
+                  >
+                </div>
+                <div class="p-4">
+                  <h2 class="font-semibold text-lg">Aster Room</h2>
+                  <div
+                    class="flex items-center text-sm text-gray-500 mt-2 space-x-4"
+                  >
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 2a6 6 0 00-6 6c0 4.2 6 10 6 10s6-5.8 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                        />
+                      </svg>
+                      <span>10 people</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                      <svg
+                        class="w-4 h-4 text-orange-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M4 3a1 1 0 011-1h10a1 1 0 011 1v16l-6-3-6 3V3z"
+                        />
+                      </svg>
+                      <span>Rp 500.000/hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat above card for more rooms -->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
