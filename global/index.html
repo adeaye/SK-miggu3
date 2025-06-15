@@ -7,26 +7,347 @@
   <link rel="stylesheet" href="../src/output.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
-<body class="min-h-screen bg-gray-100">
+<body style="font-family: 'Roboto', sans-serif;" class="min-h-screen ">
   <div class="flex h-screen">
     <!-- Sidebar -->
-    <aside class="w-20 bg-red-500 flex-shrink-0">
+    <aside class="pt-4  w-20 flex-shrink-0 flex flex-col items-center gap-4 text-neutral-500 ">
       <!-- Sidebar content here -->
+       <div class="h-6 w-6 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 justify-center rounded-full p-6  items-center flex">
+        <H1 class="text-2xl font-bold text-white ">E</H1>
+       </div>
+
+       <div>
+        <a href="">
+          <span class="icon-[line-md--arrow-right-circle] text-amber-400" style="width: 48px; height: 48px;"></span>
+        </a>
+        
+       </div>
+
+       <div>
+        <a href="">
+          <span class="icon-[line-md--grid-3] text-amber-400 " style="width: 48px; height: 48px;"></span>
+        </a>
+       </div>
+
+       <div>
+        <a href="">
+           <span class="icon-[line-md--file-document]" style="width: 48px; height: 48px;"></span>
+        </a>
+      </div>
+
+       <div>
+        <a href="">
+          <span class="icon-[line-md--text-box-multiple-to-text-box-transition]" style="width: 48px; height: 48px;"></span>
+        </a>
+       </div>
+
+       <div>
+        <a href="">
+          <span class="icon-[line-md--folder-multiple]" style="width: 48px; height: 48px;"></span>
+        </a>
+       </div>
+       
+       <div>
+        <a href="">
+          <span class="icon-[line-md--cog-loop]" style="width: 48px; height: 48px;"></span>
+        </a>
+       </div>
     </aside>
 
-    <!-- Main Content -->
-    <main class="flex-1 flex flex-col">
+    <!-- Main container -->
+    <main class="flex-1 flex flex-col h-screen">
       <!-- Topbar -->
-      <header class="h-20 bg-green-400">
+      <header class="h-20 ">
         <!-- Header content here -->
+
+        <div class="h-full flex justify-between ">
+          <div class="h-full flex items-center">
+            <h1 class="text-2xl font-bold">Dashboard</h1>
+          </div>
+
+          <!-- admin start -->
+          <div class="flex items-center gap-3.5 p-5 ">
+            <img src="../src/img/Desain tanpa judul.png" alt="" class="h-10 w-10 rounded-full me-1 ">
+
+            <div class="flex flex-col ">
+              <p class="font-bold ">Akbar</p>
+              <p class="text-xs text-zinc-500  ">Admin</p>
+            </div>
+
+            <a href="">
+              <span class="icon-[line-md--log-out] text-orange-600 " style="width:25px; height:25px;"></span>
+            </a>
+
+          </div>
+          <!-- admin end -->
+        </div>
       </header>
 
       <!-- Page Content -->
-      <section class="flex-1 bg-yellow-300">
-        <!-- Page content here -->
-      </section>
+       <section class="flex flex-col  bg-zinc-300  ">
+
+        <!-- date filter start -->
+        <div class="grid grid-cols-8 gap-4 p-3 rounded-2xl bg-white m-3 ">
+          <div class="col-span-3 ">
+            <p>start Date</p>
+            <div class="p-1 text-zinc-400 border rounded flex justify-between items-center">
+            <input id="startDate" type="text" placeholder="Select date" class="outline-none w-full bg-transparent placeholder:text-zinc-400" />
+            <span class="icon-[line-md--calendar] ml-2" style="width: 18px; height: 18px;"></span>
+            </div>
+          </div>
+
+          <div class="col-span-3">
+            <p>End Date</p>
+            <div class="p-1 text-zinc-400 border rounded flex justify-between items-center">
+            <input id="startDate" type="text" placeholder="Select date" class="outline-none w-full bg-transparent placeholder:text-zinc-400" />
+            <span class="icon-[line-md--calendar] ml-2" style="width: 18px; height: 18px;"></span>
+            </div>
+          </div>
+
+          <button class="col-span-2 text-white text-xl rounded-2xl bg-amber-600  border">
+            Search 
+          </button>
+        </div>
+        <!-- Date filter end -->
+
+        <!-- summary card section start-->
+           <div class="flex w-full gap-2 p-3 ">
+            <div class="w-1/4 bg-white p-3 rounded-2xl  ">
+              <p>Total Omset</p>
+              <p class="font-bold text-lg ">Rp 8,000,000,-</p>
+            </div>
+
+            <div class="w-1/4 bg-white p-2 rounded-2xl">
+              <p>Total Reservation</p>
+              <p class="font-bold text-lg ">100</p>
+            </div>
+
+            <div class="w-1/4 bg-white p-2 rounded-2xl">
+              <p>Total View</p>
+              <p class="font-bold text-lg ">500</p>
+            </div>
+
+            <div class="w-1/4 bg-white p-2 rounded-2xl">
+              <p>Total Rooms</p>
+              <p class="font-bold text-lg ">12</p>
+            </div>
+           </div>
+        <!-- summary card section end -->
+
+        <!-- Room start -->
+         <div class="grid grid-cols-4 gap-4 p-3">
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600  " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+
+          <div class="flex items-center bg-white p-2 rounded-2xl">
+            <div>
+              <h4 class="text-zinc-800 font-bold text-lg">Aster Room</h4>
+              <p class="text-zinc-600 text-xs ">Presentage of usage</p>
+              <p class="font-bold">80%</p>
+              <p class="text-zinc-600 text-xs ">Omzet</p>
+              <p class="font-bold">Rp 2,000,000,-</p>
+            </div>
+
+            <span class="icon-[line-md--loading-twotone-loop] text-amber-600 " style="width: 80px; height: 80px;"></span>
+          </div>
+         </div>
+         <!-- Room end -->
+       </section>
     </main>
   </div>
+
+
+<!-- script -->
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#startDate", {
+    dateFormat: "Y-m-d"
+  });
+
+  flatpickr("#endDate", {
+    dateFormat: "Y-m-d"
+  });
+</script>
+
 </body>
 </html>
