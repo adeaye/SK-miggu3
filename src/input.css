@@ -1,0 +1,6 @@
+@import "tailwindcss";
+/* src/input.css */
+@plugin "@iconify/tailwind4" {
+  prefixes: line-md; /* Pastikan 'line-md' ada di sini */
+  /* Tambahkan prefix lain yang Anda gunakan, misal: mdi-light, fa-solid */
+}
